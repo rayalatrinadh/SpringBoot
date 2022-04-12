@@ -1,0 +1,30 @@
+1)Lombok for data members/methods
+2)spring web 
+3)spring data jpa
+4)h2 console
+
+
+//Annotations used 
+
+@NotBlank
+@Email
+@Pattern
+@Size
+@NotEmpty
+@ControlAdvice
+@ExceptionHandler
+@Autowired
+@Service
+#Controller
+
+//Lombok.*;
+@Data
+@AllArgsConstructor
+@AoArgsConstructor
+
+//jakarta.persistence.*;
+
+@Entity
+@Table(name = "tableName""
+@Id
+@Generated Value
