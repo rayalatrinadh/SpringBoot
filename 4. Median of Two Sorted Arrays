@@ -37,6 +37,5 @@ class Solution {
              return resultArr[rCount/2];
            
     return (double)((resultArr[rCount/2] + resultArr[(rCount/2)-1] )) / 2;
-        
     }
 }
