@@ -1,0 +1,42 @@
+Thought Process Behind the Logice : 
+1)Understand the problem statement
+2)Take pen and paper
+3)first put your mind logic into the paper before putting into the machine(compiler), that's it simple.
+
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int aCount = 0;
+        int bCount = 0;
+        int rCount = 0;
+        int[] resultArr = new int[nums1.length+nums2.length];
+
+
+        while(aCount < nums1.length && bCount < nums2.length){
+            if(nums1[aCount] < nums2[bCount]){
+                resultArr[rCount++] = nums1[aCount];
+                aCount++;
+            }else{
+                resultArr[rCount++] = nums2[bCount];
+                bCount++;
+            }
+        }
+
+        if(aCount != nums1.length ){
+            while(aCount < nums1.length){
+                resultArr[rCount++] = nums1[aCount];
+                aCount++;
+            }
+        }else{
+            while(bCount < nums2.length){
+                resultArr[rCount++] = nums2[bCount];
+                bCount++;
+            }
+        }
+        
+        if(rCount % 2 != 0)
+             return resultArr[rCount/2];
+           
+    return (double)((resultArr[rCount/2] + resultArr[(rCount/2)-1] )) / 2;
+        
+    }
+}
